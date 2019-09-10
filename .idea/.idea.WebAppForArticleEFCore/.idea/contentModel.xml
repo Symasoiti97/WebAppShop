@@ -5,11 +5,30 @@
     <e p="C:\Users\Настенька\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Настенька\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_WebAppForArticleEFCore.831616735.00" t="ExcludeRecursive" />
     <e p="C:\Users\Настенька\RiderProjects\WebAppForArticleEFCore" t="IncludeFlat">
+      <e p="BusinessLogic" t="IncludeRecursive">
+        <e p="Bin" t="ExcludeRecursive" />
+        <e p="BusinessLogic.csproj" t="IncludeRecursive" />
+        <e p="DataManager" t="Include">
+          <e p="IOperationDb.cs" t="Include" />
+          <e p="OperationDb.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.1" t="Include">
+              <e p="BusinessLogic.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="DataBase" t="IncludeRecursive">
         <e p="ApplicationContext.cs" t="Include" />
         <e p="Bin" t="ExcludeRecursive" />
-        <e p="Class1.cs" t="Include" />
         <e p="DataBase.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20190729104528_init.cs" t="Include" />
+          <e p="20190729104528_init.Designer.cs" t="Include" />
+          <e p="ApplicationContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Item.cs" t="Include" />
           <e p="Order.cs" t="Include" />
@@ -32,7 +51,11 @@
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
+          <e p="AddItemViewModel.cs" t="Include" />
+          <e p="EditItemViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="ItemsViewModel.cs" t="Include" />
+          <e p="OrdersViewModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -50,10 +73,11 @@
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
           <e p="Home" t="Include">
-            <e p="About.cshtml" t="Include" />
-            <e p="Contact.cshtml" t="Include" />
+            <e p="AddItem.cshtml" t="Include" />
+            <e p="EditItem.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
-            <e p="Privacy.cshtml" t="Include" />
+            <e p="Items.cshtml" t="Include" />
+            <e p="Orders.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />

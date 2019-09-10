@@ -4333,6 +4333,46 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Z.EntityFramework.Plus.EFCore/2.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "[2.0.0, 3.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll": {}
+        }
+      },
+      "BusinessLogic/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "DataBase": "1.0.0",
+          "Z.EntityFramework.Plus.EFCore": "2.0.7"
+        },
+        "compile": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BusinessLogic.dll": {}
+        }
+      },
+      "DataBase/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.EntityFrameworkCore.Tools": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/DataBase.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataBase.dll": {}
+        }
       }
     }
   },
@@ -11785,10 +11825,36 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Z.EntityFramework.Plus.EFCore/2.0.7": {
+      "sha512": "g0Xas5BmySC2iWYe8dY83IfFFFR0b/ZAhb7AmPrrRE76MRYJYgD3yDRIeBlo5JbpjLWLnRLMJWuEZ3OBcoh8xg==",
+      "type": "package",
+      "path": "z.entityframework.plus.efcore/2.0.7",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.deps.json",
+        "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.dll",
+        "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.pdb",
+        "lib/netstandard2.0/Z.EntityFramework.Plus.EFCore.xml",
+        "z.entityframework.plus.efcore.2.0.7.nupkg.sha512",
+        "z.entityframework.plus.efcore.nuspec"
+      ]
+    },
+    "BusinessLogic/1.0.0": {
+      "type": "project",
+      "path": "../BusinessLogic/BusinessLogic.csproj",
+      "msbuildProject": "../BusinessLogic/BusinessLogic.csproj"
+    },
+    "DataBase/1.0.0": {
+      "type": "project",
+      "path": "../DataBase/DataBase.csproj",
+      "msbuildProject": "../DataBase/DataBase.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
+      "BusinessLogic >= 1.0.0",
+      "DataBase >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0"
@@ -11824,7 +11890,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj": {
+              "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj"
+            },
+            "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj": {
+              "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

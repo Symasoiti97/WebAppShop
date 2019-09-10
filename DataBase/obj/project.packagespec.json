@@ -28,11 +28,11 @@
       "dependencies": {
         "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
-          "version": "[2.2.4, )"
+          "version": "[2.1.1, )"
         },
         "Microsoft.EntityFrameworkCore.Tools": {
           "target": "Package",
-          "version": "[2.2.4, )"
+          "version": "[2.1.1, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",

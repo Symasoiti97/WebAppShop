@@ -14,7 +14,14 @@
     ],
     "frameworks": {
       "netcoreapp2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj": {
+            "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj"
+          },
+          "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj": {
+            "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
