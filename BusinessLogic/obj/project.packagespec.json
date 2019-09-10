@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj",
+    "projectName": "BusinessLogic",
+    "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\BusinessLogic.csproj",
+    "outputPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\BusinessLogic\\obj\\",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.1"
+    ],
+    "frameworks": {
+      "netcoreapp2.1": {
+        "projectReferences": {
+          "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj": {
+            "projectPath": "C:\\Users\\Настенька\\RiderProjects\\WebAppForArticleEFCore\\DataBase\\DataBase.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.1.0, )",
+          "autoReferenced": true
+        },
+        "Z.EntityFramework.Plus.EFCore": {
+          "target": "Package",
+          "version": "[2.0.7, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}
