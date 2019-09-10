@@ -17,7 +17,9 @@ namespace DataBase
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
+            modelBuilder.Entity<Order>()
+                .Property(ord => ord.DateTime)
+                .HasDefaultValueSql("GETDATE()");
         }
     }
 

@@ -26,14 +26,32 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">WebApp</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ShopClop</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Главная</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-controller="Home" asp-action="Items">Мои товары</a></li>
+                        <li><a asp-controller="Home" asp-action="AddItem">Добавить товар</a></li>
+                        <li><a asp-controller="Home" asp-action="Orders">Мои заказы</a></li>
+                    }
                 </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="navbar-form navbar-right">
+                        <label class="control-label text-info">@User.Identity.Name</label>
+                        <a class="btn-danger form-control" asp-action="LogOut" asp-controller="Home">Выйти</a>
+                    </div>
+                }
+                else
+                {
+                    <form asp-action="LogIn" asp-controller="Home" method="post" class="navbar-form navbar-right">
+                        <input class="form-control" name="name" type="text" placeholder="Введите ваше имя"/>
+                        <input class="btn-success form-control" type="submit" value="Войти"/>
+                    </form>
+                }
             </div>
         </div>
     </nav>

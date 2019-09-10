@@ -1,0 +1,32 @@
+﻿@model OrdersViewModel
+@{
+    ViewData["Title"] = "Заказы";
+}
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <tr>
+        <td>Продовец</td>
+        <td>Телефон</td>
+        <td>Адрес(куда)</td>
+        <td>Нименование товара</td>
+        <td>Цена</td>
+        <td>Количество</td>
+        <td>Общая сумма</td>
+    </tr>
+    @foreach (var order in Model.Orders)
+    {
+        <tr>
+            <td>@order.Item.User.Name</td>
+            <td>@order.Item.User.Phone</td>
+            <td>@order.User.Address</td>           
+            <td>@order.Item.Name</td>
+            <td>@order.Item.Price</td>
+            <td>@order.Quantity</td>
+            <td>@order.TotalPrice</td>
+            <td>
+                <a asp-action="DeleleOrder" asp-controller="Home" asp-route-orderId="@order.Id">Удалить</a>
+            </td>
+        </tr>
+    }
+</table>

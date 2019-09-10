@@ -1,0 +1,30 @@
+@model ItemsViewModel;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Мои товары</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <td>Наименование</td>
+        <td>Цена</td>
+        <td>Количество</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Items)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Quantity</td>
+            <td>
+                <a asp-action="EditItem" asp-controller="Home" asp-route-itemId="@item.Id">Редактировать</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
